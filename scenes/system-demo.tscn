@@ -19,7 +19,6 @@ glow_bloom = 0.3
 radius = 3.0
 is_light_source = true
 glow_color = Color(1, 0.667, 0.2, 1)
-glow_energy = 4.0
 
 [node name="Sun" type="OmniLight3D" parent="Star" unique_id=274182255]
 light_energy = 8.0
@@ -28,86 +27,62 @@ omni_range = 120.0
 [node name="Mercury" parent="." unique_id=476461370 instance=ExtResource("1_iup75")]
 transform = Transform3D(0.93969256, 0, 0.3420201, 0, 1, 0, -0.3420201, 0, 0.93969256, 0, 0, 0)
 radius = 0.35
-orbit_radius = 4.0
+orbit_radius = 6.0
 orbit_speed = 0.6
 orbit_start_angle = 20.0
-is_light_source = null
-glow_color = null
-glow_energy = null
 
 [node name="Venus" parent="." unique_id=220639713 instance=ExtResource("1_iup75")]
 transform = Transform3D(-0.08715577, 0, 0.9961947, 0, 1, 0, -0.9961947, 0, -0.08715577, 0, 0, 0)
 radius = 0.55
-orbit_radius = 6.0
+orbit_radius = 9.0
 orbit_speed = 0.47
 orbit_start_angle = 95.0
-is_light_source = null
-glow_color = null
-glow_energy = null
 
 [node name="Earth" parent="." unique_id=892173840 instance=ExtResource("1_iup75")]
 transform = Transform3D(-0.9396926, 0, 0.3420202, 0, 1, 0, -0.3420202, 0, -0.9396926, 0, 0, 0)
 radius = 0.58
-orbit_radius = 8.0
+orbit_radius = 12.0
 orbit_speed = 0.38
 orbit_start_angle = 160.0
-is_light_source = null
-glow_color = null
-glow_energy = null
 
 [node name="Mars" parent="." unique_id=1059762533 instance=ExtResource("1_iup75")]
 transform = Transform3D(-0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, -0.4999999, 0, 0, 0)
 radius = 0.42
-orbit_radius = 10.0
+orbit_radius = 15.0
 orbit_speed = 0.3
 orbit_start_angle = 240.0
-is_light_source = null
-glow_color = null
-glow_energy = null
 
 [node name="Jupiter" parent="." unique_id=1268818097 instance=ExtResource("1_iup75")]
 transform = Transform3D(0.57357645, 0, 0.81915206, 0, 1, 0, -0.81915206, 0, 0.57357645, 0, 0, 0)
 radius = 1.8
-orbit_radius = 15.0
+orbit_radius = 26.0
 orbit_speed = 0.18
 orbit_start_angle = 55.0
-is_light_source = null
-glow_color = null
-glow_energy = null
 
 [node name="Saturn" parent="." unique_id=882576001 instance=ExtResource("1_iup75")]
-transform = Transform3D(-0.98480755, 0, -0.1736482, 0, 1, 0, 0.1736482, 0, -0.98480755, 0, 0, 0)
+transform = Transform3D(-0.9848075, 0, -0.17364818, 0, 1, 0, 0.17364818, 0, -0.9848075, 0, 0, 0)
 radius = 1.5
-orbit_radius = 20.0
+orbit_radius = 34.0
 orbit_speed = 0.13
 orbit_start_angle = 190.0
-is_light_source = null
-glow_color = null
-glow_energy = null
 
 [node name="Uranus" parent="." unique_id=1428166507 instance=ExtResource("1_iup75")]
 transform = Transform3D(0.4999999, 0, -0.86602545, 0, 1, 0, 0.86602545, 0, 0.4999999, 0, 0, 0)
-orbit_radius = 25.0
+orbit_radius = 42.0
 orbit_speed = 0.09
 orbit_start_angle = 300.0
-is_light_source = null
-glow_color = null
-glow_energy = null
 
 [node name="Neptune" parent="." unique_id=110830080 instance=ExtResource("1_iup75")]
 transform = Transform3D(0.8660253, 0, -0.5000002, 0, 1, 0, 0.5000002, 0, 0.8660253, 0, 0, 0)
-orbit_radius = 30.0
+orbit_radius = 50.0
 orbit_speed = 0.06
 orbit_start_angle = 330.0
-is_light_source = null
-glow_color = null
-glow_energy = null
 
 [node name="CameraRig" type="Node3D" parent="." unique_id=33766781]
 script = ExtResource("2_lc5ob")
 
 [node name="Camera3D" type="Camera3D" parent="CameraRig" unique_id=1135021141]
-transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 30, 30)
+transform = Transform3D(1, 0, 0, 0, 0.70710677, 0.70710677, 0, -0.70710677, 0.70710677, 0, 50, 50)
 current = true
 
 [node name="Environment" type="WorldEnvironment" parent="." unique_id=648222178]
