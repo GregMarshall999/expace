@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://btdi8xh8dnys2"]
+
+[ext_resource type="Script" uid="uid://csvfbb1ddnysa" path="res://scripts/celestial_body.gd" id="1_culw3"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_wfcjp"]
+
+[node name="CelestialBody" type="Node3D" unique_id=1405387380]
+script = ExtResource("1_culw3")
+
+[node name="Mesh" type="MeshInstance3D" parent="." unique_id=1780018365]
+mesh = SubResource("SphereMesh_wfcjp")
