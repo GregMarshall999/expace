@@ -10,14 +10,15 @@ extends Node3D
 @export var orbit_radius: float = 0.0:
 	set(value):
 		orbit_radius = value
-		_apply_orbit_radius()
+		_apply_orbit_position()
 
 @export var orbit_speed: float = 0.0 # radians per second
 
 @export_range(0.0, 360.0, 0.1, "degrees") var orbit_start_angle: float = 0.0:
 	set(value):
 		orbit_start_angle = value
-		_apply_orbit_start_angle()
+		_orbit_angle = deg_to_rad(value)
+		_apply_orbit_position()
 
 @export var is_light_source: bool = false:
 	set(value):
@@ -36,31 +37,34 @@ extends Node3D
 
 @onready var mesh_instance: MeshInstance3D = $Mesh
 
+# Orbit angle in radians. The body's own `position` is derived from this
+# each frame rather than rotating the node, so a child CelestialBody (a
+# moon) parented directly under this one orbits this body's actual
+# position instead of inheriting a spin around this body's own parent.
+var _orbit_angle: float = 0.0
+
 func _ready() -> void:
+	_orbit_angle = deg_to_rad(orbit_start_angle)
+	rotation = Vector3.ZERO
 	_apply_radius()
-	_apply_orbit_radius()
-	_apply_orbit_start_angle()
+	_apply_orbit_position()
 	_apply_light_source_material()
 
 func _process(delta: float) -> void:
 	if Engine.is_editor_hint():
 		return
-	rotate_y(orbit_speed * delta)
+	_orbit_angle += orbit_speed * delta
+	_apply_orbit_position()
 
 func _apply_radius() -> void:
 	if not is_node_ready():
 		return
 	mesh_instance.scale = Vector3.ONE * radius
 
-func _apply_orbit_radius() -> void:
+func _apply_orbit_position() -> void:
 	if not is_node_ready():
 		return
-	mesh_instance.position = Vector3(orbit_radius, 0.0, 0.0)
-
-func _apply_orbit_start_angle() -> void:
-	if not is_node_ready():
-		return
-	rotation_degrees.y = orbit_start_angle
+	position = Vector3(orbit_radius * cos(_orbit_angle), 0.0, -orbit_radius * sin(_orbit_angle))
 
 func _apply_light_source_material() -> void:
 	if not is_node_ready():
