@@ -19,6 +19,8 @@ glow_bloom = 0.3
 radius = 3.0
 is_light_source = true
 glow_color = Color(1, 0.667, 0.2, 1)
+trail_length = 0.0
+trail_fade = 0.5
 
 [node name="Sun" type="OmniLight3D" parent="Star" unique_id=274182255]
 light_energy = 8.0
@@ -30,6 +32,8 @@ radius = 0.35
 orbit_radius = 6.0
 orbit_speed = 0.6
 orbit_start_angle = 20.0
+trail_length = 0.25
+trail_fade = 0.4
 
 [node name="Venus" parent="." unique_id=220639713 instance=ExtResource("1_iup75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.78440166, 0, -8.965753)
@@ -37,6 +41,8 @@ radius = 0.55
 orbit_radius = 9.0
 orbit_speed = 0.47
 orbit_start_angle = 95.0
+trail_length = 0.25
+trail_fade = 0.4
 
 [node name="Earth" parent="." unique_id=892173840 instance=ExtResource("1_iup75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.276312, 0, -4.104242)
@@ -44,6 +50,8 @@ radius = 0.58
 orbit_radius = 12.0
 orbit_speed = 0.38
 orbit_start_angle = 160.0
+trail_length = 0.25
+trail_fade = 0.4
 
 [node name="Moon" parent="Earth" unique_id=549572162 instance=ExtResource("1_iup75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.76604444, 0, -0.64278764)
@@ -51,6 +59,8 @@ radius = 0.15
 orbit_radius = 1.0
 orbit_speed = 1.2
 orbit_start_angle = 40.0
+trail_length = 0.3
+trail_fade = 0.3
 
 [node name="Mars" parent="." unique_id=1059762533 instance=ExtResource("1_iup75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0, 12.990381)
@@ -58,6 +68,8 @@ radius = 0.42
 orbit_radius = 15.0
 orbit_speed = 0.3
 orbit_start_angle = 240.0
+trail_length = 0.25
+trail_fade = 0.4
 
 [node name="Phobos" parent="Mars" unique_id=607321313 instance=ExtResource("1_iup75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68936545, 0, -0.12155373)
@@ -65,6 +77,8 @@ radius = 0.08
 orbit_radius = 0.7
 orbit_speed = 2.0
 orbit_start_angle = 10.0
+trail_length = 0.3
+trail_fade = 0.3
 
 [node name="Deimos" parent="Mars" unique_id=619168963 instance=ExtResource("1_iup75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9396926, 0, 0.34202015)
@@ -72,6 +86,8 @@ radius = 0.07
 orbit_radius = 1.0
 orbit_speed = 1.4
 orbit_start_angle = 200.0
+trail_length = 0.3
+trail_fade = 0.3
 
 [node name="Jupiter" parent="." unique_id=1268818097 instance=ExtResource("1_iup75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.912988, 0, -21.297953)
@@ -79,6 +95,8 @@ radius = 1.8
 orbit_radius = 26.0
 orbit_speed = 0.18
 orbit_start_angle = 55.0
+trail_length = 0.25
+trail_fade = 0.4
 
 [node name="Io" parent="Jupiter" unique_id=2107860895 instance=ExtResource("1_iup75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7866463, 0, -2.161293)
@@ -86,6 +104,8 @@ radius = 0.25
 orbit_radius = 2.3
 orbit_speed = 1.0
 orbit_start_angle = 70.0
+trail_length = 0.3
+trail_fade = 0.3
 
 [node name="Europa" parent="Jupiter" unique_id=2133185893 instance=ExtResource("1_iup75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.52094454, 0, 2.9544232)
@@ -93,6 +113,8 @@ radius = 0.22
 orbit_radius = 3.0
 orbit_speed = 0.7
 orbit_start_angle = 260.0
+trail_length = 0.3
+trail_fade = 0.3
 
 [node name="Saturn" parent="." unique_id=882576001 instance=ExtResource("1_iup75")]
 transform = Transform3D(0.9999997, 0, 0, 0, 1, 0, 0, 0, 0.9999997, -33.483463, 0, 5.904038)
@@ -100,6 +122,8 @@ radius = 1.5
 orbit_radius = 34.0
 orbit_speed = 0.13
 orbit_start_angle = 190.0
+trail_length = 0.25
+trail_fade = 0.4
 
 [node name="Titan" parent="Saturn" unique_id=1653795217 instance=ExtResource("1_iup75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9052559, 0, -1.1)
@@ -107,18 +131,24 @@ radius = 0.3
 orbit_radius = 2.2
 orbit_speed = 0.6
 orbit_start_angle = 150.0
+trail_length = 0.3
+trail_fade = 0.3
 
 [node name="Uranus" parent="." unique_id=1428166507 instance=ExtResource("1_iup75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 36.373066)
 orbit_radius = 42.0
 orbit_speed = 0.09
 orbit_start_angle = 300.0
+trail_length = 0.25
+trail_fade = 0.4
 
 [node name="Neptune" parent="." unique_id=110830080 instance=ExtResource("1_iup75")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.30127, 0, 25)
 orbit_radius = 50.0
 orbit_speed = 0.06
 orbit_start_angle = 330.0
+trail_length = 0.25
+trail_fade = 0.4
 
 [node name="CameraRig" type="Node3D" parent="." unique_id=33766781]
 script = ExtResource("2_lc5ob")
