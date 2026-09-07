@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Expace"
-run/main_scene="uid://bf3oaebqdjvio"
+run/main_scene="uid://iy13ihrnd21v"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://iy13ihrnd21v"]
+
+[ext_resource type="Script" uid="uid://bnffl82t1573p" path="res://scripts/goldberg_planet.gd" id="1_nbbws"]
+[ext_resource type="Script" uid="uid://2jnwvaayju3g" path="res://scripts/orbit_camera.gd" id="2_7rkhy"]
+
+[node name="root" type="Node3D" unique_id=725713856]
+
+[node name="Planet" type="Node3D" parent="." unique_id=591604200]
+script = ExtResource("1_nbbws")
+
+[node name="Mesh" type="MeshInstance3D" parent="Planet" unique_id=833479170]
+
+[node name="CameraRig" type="Node3D" parent="." unique_id=164436473]
+script = ExtResource("2_7rkhy")
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig" unique_id=1502504163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
+current = true
+
+[node name="Sun" type="DirectionalLight3D" parent="." unique_id=901058874]
+transform = Transform3D(0.8660254, 0.35355338, -0.35355338, 0, 0.70710677, 0.70710677, 0.5, -0.6123724, 0.6123724, 0, 0, 0)
